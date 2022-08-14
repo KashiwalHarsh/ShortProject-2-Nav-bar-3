@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studify-Home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- -----------header----------- -->
+
+    <section class="header">
+        <nav>
+            <a href="">
+                <img src="img/Studify dark.png">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">VIDEOS</a></li>
+                    <li><a href="#" onclick="dropOpen1()">COURSE <i class="fa fa-angle-down"></i></a>
+                        <ul id="showA" class="showA">
+                            <li><a href="#">B.Tech</a></li>
+                            <li><a href="#">BBA</a></li>
+                            <li><a href="#">B.Sc Agri</a></li>
+                            <li><a href="#">B.Com</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="dropOpen2()">MORE <i class="fa fa-angle-down"></i></a>
+                        <ul id="showB" class="showB">
+                            <li><a href="#">Fun</a></li>
+                            <li><a href="#">Motivation</a></li>
+                            <li><a href="#">E-Library</a></li>
+                            <li><a href="#">Games</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+
+    
+    <!-- -------------Javascript for toggle menu--------- -->
+
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        function dropOpen1() {
+            var divas = document.getElementById("showA");
+            divas.classList.toggle("showA");
+        }
+        function dropOpen2() {
+            var divam = document.getElementById("showB");
+            divam.classList.toggle("showB");
+        }
+    </script>
+
+</body>
+
+</html>
